@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		2AAE612C2534A495006B84FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE612A2534A495006B84FE /* LaunchScreen.storyboard */; };
 		2AAE61372534A495006B84FE /* MemoryGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE61362534A495006B84FE /* MemoryGameTests.swift */; };
 		2AAE61422534A495006B84FE /* MemoryGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE61412534A495006B84FE /* MemoryGameUITests.swift */; };
+		2AAE616A2534A8DE006B84FE /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE61692534A8DE006B84FE /* MemoryGame.swift */; };
+		2AAE61802535F182006B84FE /* String+ToDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE617F2535F182006B84FE /* String+ToDictionary.swift */; };
 		3DF256B13BCC857744D4476D /* Pods_MemoryGame_MemoryGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3ED92B4A18DF2F84C6F117 /* Pods_MemoryGame_MemoryGameUITests.framework */; };
 		BF6C54D77C2A678AC2DF5D05 /* Pods_MemoryGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143AF7D3D5E427B1F257956C /* Pods_MemoryGameTests.framework */; };
 		C89E1D136CA68CA7F6D93464 /* Pods_MemoryGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AEA8C6502EEA42D5B8BB12 /* Pods_MemoryGame.framework */; };
@@ -54,6 +56,8 @@
 		2AAE613D2534A495006B84FE /* MemoryGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AAE61412534A495006B84FE /* MemoryGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameUITests.swift; sourceTree = "<group>"; };
 		2AAE61432534A495006B84FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AAE61692534A8DE006B84FE /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
+		2AAE617F2535F182006B84FE /* String+ToDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ToDictionary.swift"; sourceTree = "<group>"; };
 		2F062FB46BFB355D2CA9DC9B /* Pods-MemoryGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryGame.debug.xcconfig"; path = "Target Support Files/Pods-MemoryGame/Pods-MemoryGame.debug.xcconfig"; sourceTree = "<group>"; };
 		30AEA8C6502EEA42D5B8BB12 /* Pods_MemoryGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoryGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		516F2B40960C084D0EAF8951 /* Pods-MemoryGame-MemoryGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryGame-MemoryGameUITests.release.xcconfig"; path = "Target Support Files/Pods-MemoryGame-MemoryGameUITests/Pods-MemoryGame-MemoryGameUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,7 +105,6 @@
 				BEDF1365635E409A346AF143 /* Pods-MemoryGameTests.debug.xcconfig */,
 				A9876CF95AFF04ECD73C5EA8 /* Pods-MemoryGameTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -130,6 +133,8 @@
 		2AAE611E2534A494006B84FE /* MemoryGame */ = {
 			isa = PBXGroup;
 			children = (
+				2AAE617E2535F14A006B84FE /* Extensions */,
+				2AAE61682534A8CB006B84FE /* Models */,
 				2AAE611F2534A494006B84FE /* AppDelegate.swift */,
 				2AAE61212534A494006B84FE /* SceneDelegate.swift */,
 				2AAE61232534A494006B84FE /* ViewController.swift */,
@@ -159,6 +164,22 @@
 			path = MemoryGameUITests;
 			sourceTree = "<group>";
 		};
+		2AAE61682534A8CB006B84FE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2AAE61692534A8DE006B84FE /* MemoryGame.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2AAE617E2535F14A006B84FE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2AAE617F2535F182006B84FE /* String+ToDictionary.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		752467133D313BDE103F4BE7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +201,7 @@
 				2AAE61182534A494006B84FE /* Sources */,
 				2AAE61192534A494006B84FE /* Frameworks */,
 				2AAE611A2534A494006B84FE /* Resources */,
+				CC783EBE21C5D7CF89439409 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -198,7 +220,6 @@
 				2AAE612E2534A495006B84FE /* Sources */,
 				2AAE612F2534A495006B84FE /* Frameworks */,
 				2AAE61302534A495006B84FE /* Resources */,
-				69A053C418A5B1E8695E4B71 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,6 +239,7 @@
 				2AAE61392534A495006B84FE /* Sources */,
 				2AAE613A2534A495006B84FE /* Frameworks */,
 				2AAE613B2534A495006B84FE /* Resources */,
+				DE678C81EC69E26B98EC2A2A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -321,23 +343,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		69A053C418A5B1E8695E4B71 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MemoryGameTests/Pods-MemoryGameTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MemoryGameTests/Pods-MemoryGameTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MemoryGameTests/Pods-MemoryGameTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		71841853726B8C3C2FD9A7B4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -358,6 +363,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC783EBE21C5D7CF89439409 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MemoryGame/Pods-MemoryGame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MemoryGame/Pods-MemoryGame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MemoryGame/Pods-MemoryGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE678C81EC69E26B98EC2A2A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MemoryGame-MemoryGameUITests/Pods-MemoryGame-MemoryGameUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MemoryGame-MemoryGameUITests/Pods-MemoryGame-MemoryGameUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MemoryGame-MemoryGameUITests/Pods-MemoryGame-MemoryGameUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EA5AC656D127965268FDB9D1 /* [CP] Check Pods Manifest.lock */ = {
@@ -391,6 +430,8 @@
 			files = (
 				2AAE61242534A494006B84FE /* ViewController.swift in Sources */,
 				2AAE61202534A494006B84FE /* AppDelegate.swift in Sources */,
+				2AAE616A2534A8DE006B84FE /* MemoryGame.swift in Sources */,
+				2AAE61802535F182006B84FE /* String+ToDictionary.swift in Sources */,
 				2AAE61222534A494006B84FE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

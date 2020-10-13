@@ -6,12 +6,12 @@ target 'MemoryGame' do
   use_frameworks!
 
   # Pods for MemoryGame
+  pod 'Nimble'
+  pod 'Quick'
 
   target 'MemoryGameTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'Nimble'
-    pod 'Quick'
   end
 
   target 'MemoryGameUITests' do
