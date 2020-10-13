@@ -23,10 +23,24 @@ let board: [String] = [
 class ViewController: UIViewController {
     
     var game: MemoryGame = MemoryGame(gameBoard: board.toDictionary())
+    
+    @IBOutlet var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+}
+
+extension ViewController: UICollectionViewDelegate {
+    
+}
+
+extension ViewController: UICollectionViewDataSource {
+    
+}
+
+extension ViewController: UICollectionViewDelegateFlowLayout {
     
 }
