@@ -13,7 +13,7 @@ extension Array {
             var dictionary : [Int : String] = [:]
            
             for i in 0...array.count - 1 {
-                dictionary[i + 1] = array[i]
+                dictionary[i] = array[i]
             }
             
             return dictionary
