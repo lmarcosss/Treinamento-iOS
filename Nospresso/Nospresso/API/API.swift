@@ -45,20 +45,20 @@ class API {
     }
 }
 
-let api = API()
-
-api.requisitar(
-    endpoint: .maquinas,
-    sucesso: { (dados: ListaDeMaquinas) in
-        print(dados)
-    },
-    falha: { error in }
-)
-
-api.requisitar(
-    endpoint: .capsulas,
-    sucesso: { (dados: [Capsula]) in
-        print(dados)
-    },
-    falha: { error in }
-)
+//let api = API()
+//
+//api.requisitar(
+//    endpoint: .maquinas,
+//    sucesso: { (dados: ListaDeMaquinas) in
+//        print(dados)
+//    },
+//    falha: { error in }
+//)
+//
+//api.requisitar(
+//    endpoint: .capsulas,
+//    sucesso: { (dados: [Capsula]) in
+//        print(dados)
+//    },
+//    falha: { error in }
+//)
