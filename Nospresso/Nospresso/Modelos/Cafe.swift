@@ -14,8 +14,21 @@ public struct Cafe: Decodable {
     let descricao: String
     let imagem: String
     let medidas: [Medida]
+    let intensidade: Int?
     
     enum Medida: String, Decodable {
-        case  lungo, expresso, ristretto
+        case  lungo, espresso, ristretto
     }
 }
+
+//{
+//    "id": 1,
+//    "nome": "Hawaii Kona",
+//    "descricao": "CAFÉ FRUTADO, EQUILIBRADO E RARO",
+//    "intensidade": 5,
+//    "precoUnitario": 6.00,
+//    "imagem": "https://www.nespresso.com/ecom/medias/sys_master/public/13334877011998/Desktop-Standard-80x80.png",
+//    "medidas": [
+//        "espresso"
+//    ]
+//}

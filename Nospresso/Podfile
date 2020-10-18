@@ -6,10 +6,16 @@ target 'Nospresso' do
   use_frameworks!
 
   # Pods for Nospresso
+  
+  pod 'R.swift'
+  pod 'Nuke'
 
   target 'NospressoTests' do
     inherit! :search_paths
     # Pods for testing
+    
+    pod 'Quick'
+    pod 'Nimble'
   end
 
   target 'NospressoUITests' do
