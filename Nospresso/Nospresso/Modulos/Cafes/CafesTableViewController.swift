@@ -13,12 +13,13 @@ class CafesTableViewController : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        removerTextoBotaoVoltar()
         requisitar()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.navigationBar.barTintColor = Paleta.cafes()
         navigationController?.navigationBar.tintColor = .black
@@ -58,6 +59,13 @@ extension CafesTableViewController {
         cabecalho?.configurar(para: categorias[section])
         
         return cabecalho
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cafe = categorias[indexPath.section].cafes[indexPath.row]
+        
+        let detalheVC = DetalheCafePresenter.criarModulo(passando: cafe)
+        navigationController?.pushViewController(detalheVC, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat { 50 }

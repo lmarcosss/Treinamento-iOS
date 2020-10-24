@@ -8,11 +8,23 @@
 import UIKit
 
 class MenuProdutosViewController: UIViewController {
+    @IBOutlet private weak var maquinasView: UIView!
+    
+    @objc
+    private func tocarEmMaquinas(_ remetente: Any) {
+        let vc = MaquinasViewController(nib: R.nib.maquinasViewController)
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         removerTextoBotaoVoltar()
+        
+        //outra forma de adicionar UITapGestureRecognizer alem de peo storyboard ou xib
+        let reconhecedor = UITapGestureRecognizer(target: self, action: #selector(tocarEmMaquinas))
+        maquinasView.addGestureRecognizer(reconhecedor)
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

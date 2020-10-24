@@ -11,6 +11,7 @@ extension NumberFormatter {
     convenience init(style: Style) {
         self.init()
         self.numberStyle = style
+        
     }
 }
 extension Formatter {

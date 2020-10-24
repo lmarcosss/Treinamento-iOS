@@ -15,8 +15,8 @@ class CafeTableViewCell: UITableViewCell {
     @IBOutlet weak var cafePriceLabel: UILabel!
     
     func configurar(com cafe: Cafe) {
-        Formatter.currency.locale = Locale(identifier: "pt_BR")
         let intensidade = cafe.intensidade != nil ? "Intensidade: \(cafe.intensidade ?? 0)" : ""
+        Formatter.currency.locale = Locale(identifier: "pt_BR")
         
         cafeImageView.carregarImagem(usando: cafe.imagem)
         cafeNameLabel.text = cafe.nome
